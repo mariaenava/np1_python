@@ -35,3 +35,4 @@ def cadastro():
     usuarios[usuario] = senha
     salvar_usuarios(usuarios)
     print(f"\n---> Cadastro realizado com sucesso! Bem-vindo à nossa Plataforma, {usuario}.", end="\n"*2)
+    return usuario

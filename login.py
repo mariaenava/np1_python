@@ -13,18 +13,18 @@ def login():
             print("\n---> Usuário não encontrado. Tente novamente!", end="\n"*2)
         else:
             break  
+    
     tentativas = 3  
     while tentativas > 0:
         senha = input("Senha: ")
         
         if usuarios[usuario] == senha:
             print(f"\n---> Login bem-sucedido! Bem-vindo de volta, {usuario}!", end="\n"*2)
-            return True  
+            return usuario  # Retorna o nome do usuário ao invés de True
         else:
             tentativas -= 1
             if tentativas > 0:
                 print(f"\n---> Senha incorreta. Você possui mais {tentativas} tentativas!", end="\n"*2)
     
     print("\n---> Número máximo de tentativas excedido. Tente novamente mais tarde!", end="\n"*2)
-    return False 
-
+    return None  # Retorna None caso o login falhe
