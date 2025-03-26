@@ -28,4 +28,3 @@ def login():
     print("\n---> Número máximo de tentativas excedido. Tente novamente mais tarde!", end="\n"*2)
     return False 
 
-#Login não está reconhecendo novos usuarios
